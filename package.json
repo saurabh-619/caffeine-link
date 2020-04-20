@@ -1,0 +1,33 @@
+{
+  "name": "devconnector",
+  "version": "1.0.0",
+  "description": "Social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Saurabh Bomble",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.3",
+    "express-validator": "^6.4.0",
+    "formidable": "^1.2.2",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.2.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.7",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "request": "^2.88.2",
+    "uuid": "^7.0.3",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
